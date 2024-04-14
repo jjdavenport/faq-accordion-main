@@ -1,53 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  height: 100vh;
 }
 
 * {
-    font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 :root {
-    --background-color: hsl(275, 100%, 97%);
-    --main-background-color: hsl(0, 0%, 100%); 
-}
-
-.container {
-    display: grid;
-    grid-template-rows: 10fr auto;
-    place-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(./assets/images/background-pattern-desktop.svg);
-    background-position: top;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: var(--background-color);
+  --background-color: hsl(275, 100%, 97%);
+  --main-background-color: hsl(0, 0%, 100%);
 }
 
 .main {
-    width: 50vw;
-    height: 50vh;
-    background-color: var(--main-background-color);
-    display: flex;
-    flex-direction: column;
+  width: 50vw;
+  height: 80vh;
+  background-color: var(--main-background-color);
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  border-radius: 1rem;
+  padding: 4%;
+}
+
+.title {
+  height: 4vh;
 }
 
 .q {
-    display: flex;
+  display: flex;
+}
+
+.q h1 {
+  font-size: 1.625rem;
 }
 
 .a {
-    display: none;
+  display: none;
+  font-size: 1rem;
+}
+
+.minus:hover {
+  cursor: pointer;
 }
 
 .a-active {
-    display: flex;
+  display: flex;
 }
 
 .plus {
-    border: none;
+  height: 4vh;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.plus-hidden {
+  display: none;
+}
+
+.minus {
+  display: none;
+  border: none;
+  background: none;
+}
+
+@media screen and (width > 23.4375rem) {
+  main {
+    width: 90vw;
+    height: 90vh;
+  }
 }
