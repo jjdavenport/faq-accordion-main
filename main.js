@@ -18,6 +18,14 @@ const a4 = document.getElementById("answer4");
 const m4 = document.getElementById("minus-btn4");
 const q4 = document.getElementById("question4");
 
+function openQuestion() {
+  a1.classList.toggle("a-active");
+  b1.classList.toggle("plus-btn");
+  m1.classList.toggle("minus-btn");
+}
+
+openQuestion();
+
 q1.addEventListener("click", () => {
   a1.classList.toggle("a-active");
   b1.classList.toggle("plus-btn");
