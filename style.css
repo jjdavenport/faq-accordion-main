@@ -16,33 +16,50 @@ body {
 
 * {
   font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
   --background-color: hsl(275, 100%, 97%);
   --main-background-color: hsl(0, 0%, 100%);
+  --h2-font-color: hsl(292, 42%, 14%);
 }
 
 .main {
-  width: 50vw;
+  width: 80vw;
   height: 80vh;
   background-color: var(--main-background-color);
-  display: grid;
-  grid-template-rows: repeat(5, auto);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 1rem;
-  padding: 4%;
+  padding: 2rem;
 }
 
 .title {
-  height: 4vh;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wrap {
+  border-bottom: 1px solid grey;
 }
 
 .q {
   display: flex;
+  align-items: start;
+  justify-content: space-between;
 }
 
-.q h1 {
+.q h2 {
   font-size: 1.625rem;
+}
+
+.q h2:hover {
+  color: var(--h2-font-color);
+  cursor: pointer;
 }
 
 .a {
@@ -55,24 +72,19 @@ body {
 }
 
 .a-active {
-  display: flex;
+  display: block;
 }
 
-.plus {
-  height: 4vh;
+.plus,
+.minus {
+  height: 1rem;
   cursor: pointer;
   border: none;
   background: none;
 }
 
-.plus-hidden {
-  display: none;
-}
-
 .minus {
   display: none;
-  border: none;
-  background: none;
 }
 
 @media screen and (width > 23.4375rem) {

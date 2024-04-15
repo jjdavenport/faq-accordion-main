@@ -13,6 +13,10 @@ const b4 = document.getElementById("b4");
 const a4 = document.getElementById("4");
 const m4 = document.getElementById("m4");
 
+b1.style = "display: none";
+m1.style = "display: flex";
+a1.classList.toggle("a-active");
+
 b1.addEventListener("click", () => {
   a1.classList.toggle("a-active");
   b1.style = "display: none";
