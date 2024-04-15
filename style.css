@@ -26,7 +26,7 @@ body {
   --h2-font-color: hsl(292, 42%, 14%);
 }
 
-.main {
+main {
   width: 80vw;
   height: 80vh;
   background-color: var(--main-background-color);
@@ -43,28 +43,36 @@ body {
   gap: 1rem;
 }
 
-.wrap {
-  border-bottom: 1px solid grey;
+.title h1 {
+  font-size: 3rem;
 }
 
-.q {
+.wrap {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid black;
+}
+
+.question {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
 }
 
-.q h2 {
-  font-size: 1.625rem;
+.question h2 {
+  font-size: 1.5rem;
 }
 
-.q h2:hover {
+.question h2:hover {
   color: var(--h2-font-color);
   cursor: pointer;
 }
 
-.a {
+.answer {
   display: none;
   font-size: 1rem;
+  padding-top: 1rem;
 }
 
 .minus:hover {
@@ -77,19 +85,40 @@ body {
 
 .plus,
 .minus {
-  height: 1rem;
+  height: 2rem;
+  width: 2rem;
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.plus-btn {
+  display: none;
 }
 
 .minus {
   display: none;
 }
 
+.minus-btn {
+  display: block;
+}
+
+.plus-btn2 {
+  display: none;
+}
+
+.minus2 {
+  display: none;
+}
+
+.minus-btn2 {
+  display: block;
+}
+
 @media screen and (width > 23.4375rem) {
   main {
-    width: 90vw;
-    height: 90vh;
+    height: 50vh;
+    width: 50vw;
   }
 }

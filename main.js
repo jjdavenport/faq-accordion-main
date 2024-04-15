@@ -1,66 +1,43 @@
-const b1 = document.getElementById("b1");
-const a1 = document.getElementById("1");
-const m1 = document.getElementById("m1");
+const b1 = document.getElementById("btn1");
+const a1 = document.getElementById("answer1");
+const m1 = document.getElementById("minus-btn1");
+const q1 = document.getElementById("question1");
 
-const b2 = document.getElementById("b2");
-const a2 = document.getElementById("2");
-const m2 = document.getElementById("m2");
-const b3 = document.getElementById("b3");
-const a3 = document.getElementById("3");
-const m3 = document.getElementById("m3");
+const b2 = document.getElementById("btn2");
+const a2 = document.getElementById("answer2");
+const m2 = document.getElementById("minus-btn2");
+const q2 = document.getElementById("question2");
 
-const b4 = document.getElementById("b4");
-const a4 = document.getElementById("4");
-const m4 = document.getElementById("m4");
+const b3 = document.getElementById("btn3");
+const a3 = document.getElementById("answer3");
+const m3 = document.getElementById("minus-btn3");
+const q3 = document.getElementById("question3");
 
-b1.style = "display: none";
-m1.style = "display: flex";
-a1.classList.toggle("a-active");
+const b4 = document.getElementById("btn4");
+const a4 = document.getElementById("answer4");
+const m4 = document.getElementById("minus-btn4");
+const q4 = document.getElementById("question4");
 
-b1.addEventListener("click", () => {
+q1.addEventListener("click", () => {
   a1.classList.toggle("a-active");
-  b1.style = "display: none";
-  m1.style = "display: flex";
+  b1.classList.toggle("plus-btn");
+  m1.classList.toggle("minus-btn");
 });
 
-m1.addEventListener("click", () => {
-  a1.classList.toggle("a-active");
-  m1.style = "display: none";
-  b1.style = "display: flex";
-});
-
-b2.addEventListener("click", () => {
+q2.addEventListener("click", () => {
   a2.classList.toggle("a-active");
-  b2.style = "display: none";
-  m2.style = "display: flex";
+  b2.classList.toggle("plus-btn");
+  m2.classList.toggle("minus-btn");
 });
 
-m2.addEventListener("click", () => {
-  a2.classList.toggle("a-active");
-  m2.style = "display: none";
-  b2.style = "display: flex";
-});
-
-b3.addEventListener("click", () => {
+q3.addEventListener("click", () => {
   a3.classList.toggle("a-active");
-  b3.style = "display: none";
-  m3.style = "display: flex";
+  b3.classList.toggle("plus-btn");
+  m3.classList.toggle("minus-btn");
 });
 
-m3.addEventListener("click", () => {
-  a3.classList.toggle("a-active");
-  m3.style = "display: none";
-  b3.style = "display: flex";
-});
-
-b4.addEventListener("click", () => {
+q4.addEventListener("click", () => {
   a4.classList.toggle("a-active");
-  b4.style = "display: none";
-  m4.style = "display: flex";
-});
-
-m4.addEventListener("click", () => {
-  a4.classList.toggle("a-active");
-  m4.style = "display: none";
-  b4.style = "display: flex";
+  b4.classList.toggle("plus-btn");
+  m4.classList.toggle("minus-btn");
 });
