@@ -12,27 +12,33 @@ body {
   grid-template-rows: 1fr auto;
   place-items: center;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 * {
   font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   --background-color: hsl(275, 100%, 97%);
   --main-background-color: hsl(0, 0%, 100%);
-  --h2-font-color: hsl(292, 42%, 14%);
+  --h2-font-color: hsl(281, 82%, 54%);
+}
+
+.attribution a {
+  color: var(--h2-font-color);
 }
 
 main {
-  width: 80vw;
-  height: 80vh;
+  height: 50vh;
+  width: 90vw;
   background-color: var(--main-background-color);
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: space-between;
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -44,12 +50,15 @@ main {
 }
 
 .title h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .wrap {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid rgb(251, 251, 251);
+}
+
+.wrap:nth-child(5) {
+  border-bottom: none;
 }
 
 .question {
@@ -57,11 +66,10 @@ main {
   align-items: start;
   justify-content: space-between;
   gap: 1rem;
-  padding-top: 1rem;
 }
 
 .question h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .question h2:hover {
@@ -72,14 +80,13 @@ main {
 .answer {
   display: none;
   font-size: 1rem;
-  padding-top: 1rem;
 }
 
 .minus:hover {
   cursor: pointer;
 }
 
-.a-active {
+.answer-active {
   display: block;
 }
 
@@ -116,9 +123,9 @@ main {
   display: block;
 }
 
-@media screen and (width > 23.4375rem) {
+@media screen and (width > 30rem) {
   main {
-    height: 50vh;
-    width: 50vw;
+    height: 60vh;
+    width: 40vw;
   }
 }

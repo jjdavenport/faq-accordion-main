@@ -19,7 +19,7 @@ const m4 = document.getElementById("minus-btn4");
 const q4 = document.getElementById("question4");
 
 function openQuestion() {
-  a1.classList.toggle("a-active");
+  a1.classList.toggle("answer-active");
   b1.classList.toggle("plus-btn");
   m1.classList.toggle("minus-btn");
 }
@@ -27,25 +27,25 @@ function openQuestion() {
 openQuestion();
 
 q1.addEventListener("click", () => {
-  a1.classList.toggle("a-active");
+  a1.classList.toggle("answer-active");
   b1.classList.toggle("plus-btn");
   m1.classList.toggle("minus-btn");
 });
 
 q2.addEventListener("click", () => {
-  a2.classList.toggle("a-active");
+  a2.classList.toggle("answer-active");
   b2.classList.toggle("plus-btn");
   m2.classList.toggle("minus-btn");
 });
 
 q3.addEventListener("click", () => {
-  a3.classList.toggle("a-active");
+  a3.classList.toggle("answer-active");
   b3.classList.toggle("plus-btn");
   m3.classList.toggle("minus-btn");
 });
 
 q4.addEventListener("click", () => {
-  a4.classList.toggle("a-active");
+  a4.classList.toggle("answer-active");
   b4.classList.toggle("plus-btn");
   m4.classList.toggle("minus-btn");
 });
