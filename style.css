@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-image: url(./assets/images/background-pattern-mobile.svg);
   background-position: top;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -26,6 +26,7 @@ body {
   --background-color: hsl(275, 100%, 97%);
   --main-background-color: hsl(0, 0%, 100%);
   --h2-font-color: hsl(281, 82%, 54%);
+  --p-font-color: hsl(292, 16%, 49%);
 }
 
 .attribution a {
@@ -33,7 +34,7 @@ body {
 }
 
 main {
-  height: 50vh;
+  height: fit-content;
   width: 90vw;
   background-color: var(--main-background-color);
   display: flex;
@@ -41,6 +42,7 @@ main {
   flex-direction: column;
   border-radius: 1rem;
   padding: 2rem;
+  margin: 0 auto;
 }
 
 .title {
@@ -54,7 +56,7 @@ main {
 }
 
 .wrap {
-  border-bottom: 3px solid rgb(251, 251, 251);
+  border-bottom: 0.125rem solid rgb(251, 251, 251);
 }
 
 .wrap:nth-child(5) {
@@ -63,12 +65,15 @@ main {
 
 .question {
   display: flex;
-  align-items: start;
   justify-content: space-between;
   gap: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .question h2 {
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
 }
 
@@ -80,6 +85,11 @@ main {
 .answer {
   display: none;
   font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.answer p {
+  color: var(--p-font-color);
 }
 
 .minus:hover {
@@ -123,9 +133,18 @@ main {
   display: block;
 }
 
-@media screen and (width > 30rem) {
+@media screen and (width > 40rem) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
   main {
-    height: 60vh;
+    height: fit-content;
     width: 40vw;
+  }
+  .title h1 {
+    font-size: 3rem;
+  }
+  .question h2 {
+    font-size: 1.1rem;
   }
 }
