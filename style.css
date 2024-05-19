@@ -55,7 +55,7 @@ main {
   font-size: 2rem;
 }
 
-.wrap {
+.faq {
   border-bottom: 0.125rem solid rgb(251, 251, 251);
 }
 
@@ -92,16 +92,12 @@ main {
   color: var(--p-font-color);
 }
 
-.minus:hover {
+.minus-button:hover {
   cursor: pointer;
 }
 
-.answer-active {
-  display: block;
-}
-
-.plus,
-.minus {
+.plus-button,
+.minus-button {
   height: 2rem;
   width: 2rem;
   cursor: pointer;
@@ -109,31 +105,23 @@ main {
   background: none;
 }
 
-.plus-btn {
+.minus-button {
   display: none;
 }
 
-.minus {
-  display: none;
-}
-
-.minus-btn {
+.answer-active {
   display: block;
 }
 
-.plus-btn2 {
+.plus-button-inactive {
   display: none;
 }
 
-.minus2 {
-  display: none;
-}
-
-.minus-btn2 {
+.minus-button-active {
   display: block;
 }
 
-@media screen and (width > 40rem) {
+@media screen and (width >= 40rem) {
   body {
     background-image: url(./assets/images/background-pattern-desktop.svg);
   }
