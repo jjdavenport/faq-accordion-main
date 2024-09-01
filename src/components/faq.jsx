@@ -1,23 +1,24 @@
-const Faq = ({ data }) => {
-  const faqs = data.faqs;
-  const header = data.header;
+import { useState } from "react";
+
+const Faq = ({ question, answer, header }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
-      <main>
-        <img src={header.iconStar} />
-        <h1>{header.h1}</h1>
-        <article>
-          {faqs.map((i, index) => (
-            <details key={index}>
-              <summary>
-                {i.question} <img src={header.iconPlus} />
-                <img src={header.iconMinus} />
-              </summary>
-              <p>{i.answer}</p>
-            </details>
-          ))}
-        </article>
-      </main>
+      <details>
+        <summary
+          onClick={toggle}
+          className="list-none flex items-center justify-between cursor-pointer"
+        >
+          <span>{question}</span>
+          <img src={open ? header.iconMinus : header.iconPlus} />
+        </summary>
+        <p>{answer}</p>
+      </details>
     </>
   );
 };
