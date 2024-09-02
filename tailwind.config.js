@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        mobile: "url('./images/background-pattern-mobile.svg')",
-        deskop: "url('./images/background-pattern-desktop.svg')",
+        mobile: "url('/images/background-pattern-mobile.svg')",
+        deskop: "url('/images/background-pattern-desktop.svg')",
       },
       fontFamily: {
         custom: ["work sans", "sans-serif"],
